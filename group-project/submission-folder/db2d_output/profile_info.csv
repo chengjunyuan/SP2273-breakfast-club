@@ -1,0 +1,8 @@
+rank,level,function,calls,time
+0,0,acceleration_eval_0,5000,1.1051161289215088
+0,0,nnps.update,5000,0.042109012603759766
+0,0,Solver.dump_output,51,0.024611234664916992
+0,0,Integrator.stage1,5000,0.007283926010131836
+0,0,Integrator.update_domain,5000,0.0067903995513916016
+0,0,Solver._get_timestep,5001,0.00463414192199707
+0,0,Integrator.initial_acceleration,1,0.00090789794921875

@@ -1,0 +1,206 @@
+INFO|2023-04-10 20:31:11,486|pysph.solver.application|Started as:
+/Users/chengjunyuan/miniconda3/lib/python3.10/site-packages/pysph/examples/dam_break/dam_break_3d_lobovsky.py
+INFO|2023-04-10 20:31:11,487|pysph.solver.application|Running on Chengs-MacBook-Air.local with address Chengs-MacBook-Air.local
+INFO|2023-04-10 20:31:11,487|pysph.solver.application|Using OpenMP schedule dynamic,64
+INFO|2023-04-10 20:31:11,579|pysph.solver.application|Generating output in /Users/chengjunyuan/miniconda3/lib/python3.10/site-packages/pysph/examples/dam_break/dam_break_3d_lobovsky_output
+INFO|2023-04-10 20:31:11,614|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_4587d808f5643fdca347a5f13168543b.pyx
+INFO|2023-04-10 20:31:11,640|pysph.solver.application|----------------------------------------------------------------------
+No of particles:
+  fluid: 25200
+  boundary: 38656
+  Total: 63856
+----------------------------------------------------------------------
+INFO|2023-04-10 20:31:11,640|pysph.solver.application|Using kernel:
+----------------------------------------------------------------------
+  WendlandQuintic(dim=3)
+----------------------------------------------------------------------
+INFO|2023-04-10 20:31:11,640|pysph.solver.application|Using nnps:
+----------------------------------------------------------------------
+  LinkedListNNPS(dim=3)
+----------------------------------------------------------------------
+INFO|2023-04-10 20:31:11,640|pysph.solver.application|Using integrator:
+----------------------------------------------------------------------
+  EPECIntegrator(fluid=WCSPHStep(), boundary=WCSPHStep())
+----------------------------------------------------------------------
+INFO|2023-04-10 20:31:11,641|pysph.solver.application|Using equations:
+----------------------------------------------------------------------
+[
+Group(equations=[
+    TaitEOS(dest='fluid', sources=None, rho0=1000.0,
+    c0=32.849657532461435, gamma=7.0, p0=0.0), 
+    TaitEOSHGCorrection(dest='boundary', sources=None, rho0=1000.0,
+    c0=32.849657532461435, gamma=7.0)
+  ],
+  real=False, update_nnps=False, iterate=False, max_iterations=1,
+  min_iterations=0, start_idx=0),
+Group(equations=[
+    ContinuityEquation(dest='boundary', sources=['fluid']), 
+    ContinuityEquation(dest='fluid', sources=['fluid', 'boundary']), 
+    MomentumEquation(dest='fluid', sources=['fluid', 'boundary'],
+    c0=32.849657532461435, alpha=0.25, beta=0.0, gx=0.0, gy=0.0, gz=-9.81,
+    tensile_correction=False), 
+    XSPHCorrection(dest='fluid', sources=['fluid'], eps=0.5)
+  ],
+  real=True, update_nnps=False, iterate=False, max_iterations=1,
+  min_iterations=0, start_idx=0)
+]
+----------------------------------------------------------------------
+INFO|2023-04-10 20:31:11,641|pysph.solver.application|Callbacks:
+----------------------------------------------------------------------
+
+INFO|2023-04-10 20:31:11,641|pysph.solver.application|Pre-step callbacks:
+[]
+
+INFO|2023-04-10 20:31:11,641|pysph.solver.application|Post-step callbacks:
+[]
+
+INFO|2023-04-10 20:31:11,641|pysph.solver.application|Post-stage callbacks:
+[]
+----------------------------------------------------------------------
+
+INFO|2023-04-10 20:31:11,641|pysph.solver.application|Setup took: 5.16081 secs
+INFO|2023-04-10 20:31:11,641|pysph.solver.solver|Writing output at time 0, iteration 0, dt = 0.000222341
+INFO|2023-04-10 20:31:38,516|pysph.solver.solver|Writing output at time 0.0297362, iteration 100, dt = 0.000391847
+INFO|2023-04-10 20:32:05,833|pysph.solver.solver|Writing output at time 0.0686373, iteration 200, dt = 0.000387251
+INFO|2023-04-10 20:32:34,304|pysph.solver.solver|Writing output at time 0.107224, iteration 300, dt = 0.000384077
+INFO|2023-04-10 20:33:02,934|pysph.solver.solver|Writing output at time 0.14557, iteration 400, dt = 0.00038169
+INFO|2023-04-10 20:33:31,887|pysph.solver.solver|Writing output at time 0.183504, iteration 500, dt = 0.000380577
+INFO|2023-04-10 20:34:00,956|pysph.solver.solver|Writing output at time 0.221509, iteration 600, dt = 0.000379284
+INFO|2023-04-10 20:34:30,262|pysph.solver.solver|Writing output at time 0.259449, iteration 700, dt = 0.000379003
+INFO|2023-04-10 20:34:59,748|pysph.solver.solver|Writing output at time 0.297366, iteration 800, dt = 0.000379125
+INFO|2023-04-10 20:35:29,173|pysph.solver.solver|Writing output at time 0.335168, iteration 900, dt = 0.000375301
+INFO|2023-04-10 20:35:58,625|pysph.solver.solver|Writing output at time 0.37278, iteration 1000, dt = 0.000377168
+INFO|2023-04-10 20:36:20,298|pysph.solver.solver|Writing output at time 0.4, iteration 1073, dt = 0.000376728
+INFO|2023-04-10 20:36:28,273|pysph.solver.solver|Writing output at time 0.410178, iteration 1100, dt = 0.000376928
+INFO|2023-04-10 20:36:57,746|pysph.solver.solver|Writing output at time 0.447875, iteration 1200, dt = 0.000376879
+INFO|2023-04-10 20:37:27,137|pysph.solver.solver|Writing output at time 0.485528, iteration 1300, dt = 0.000376121
+INFO|2023-04-10 20:37:56,590|pysph.solver.solver|Writing output at time 0.523134, iteration 1400, dt = 0.000375821
+INFO|2023-04-10 20:38:26,305|pysph.solver.solver|Writing output at time 0.560714, iteration 1500, dt = 0.000375644
+INFO|2023-04-10 20:38:55,788|pysph.solver.solver|Writing output at time 0.598266, iteration 1600, dt = 0.000375284
+INFO|2023-04-10 20:38:57,257|pysph.solver.solver|Writing output at time 0.6, iteration 1605, dt = 0.000375182
+INFO|2023-04-10 20:39:25,245|pysph.solver.solver|Writing output at time 0.635658, iteration 1700, dt = 0.000375217
+INFO|2023-04-10 20:39:54,666|pysph.solver.solver|Writing output at time 0.673165, iteration 1800, dt = 0.00037475
+INFO|2023-04-10 20:40:23,997|pysph.solver.solver|Writing output at time 0.710652, iteration 1900, dt = 0.000374757
+INFO|2023-04-10 20:40:53,276|pysph.solver.solver|Writing output at time 0.748179, iteration 2000, dt = 0.000375397
+INFO|2023-04-10 20:41:22,484|pysph.solver.solver|Writing output at time 0.785715, iteration 2100, dt = 0.000375128
+INFO|2023-04-10 20:41:51,613|pysph.solver.solver|Writing output at time 0.823236, iteration 2200, dt = 0.000375558
+INFO|2023-04-10 20:42:20,764|pysph.solver.solver|Writing output at time 0.860513, iteration 2300, dt = 0.000352898
+INFO|2023-04-10 20:42:50,022|pysph.solver.solver|Writing output at time 0.891264, iteration 2400, dt = 0.00031158
+INFO|2023-04-10 20:43:19,170|pysph.solver.solver|Writing output at time 0.924357, iteration 2500, dt = 0.000352437
+INFO|2023-04-10 20:43:48,311|pysph.solver.solver|Writing output at time 0.960157, iteration 2600, dt = 0.000364938
+INFO|2023-04-10 20:44:17,429|pysph.solver.solver|Writing output at time 0.996736, iteration 2700, dt = 0.000370009
+INFO|2023-04-10 20:44:20,050|pysph.solver.solver|Writing output at time 1, iteration 2709, dt = 0.00036722
+INFO|2023-04-10 20:44:46,624|pysph.solver.solver|Writing output at time 1.03298, iteration 2800, dt = 0.000369993
+INFO|2023-04-10 20:45:15,779|pysph.solver.solver|Writing output at time 1.07004, iteration 2900, dt = 0.000370844
+INFO|2023-04-10 20:45:44,954|pysph.solver.solver|Writing output at time 1.10745, iteration 3000, dt = 0.000372298
+INFO|2023-04-10 20:46:14,335|pysph.solver.solver|Writing output at time 1.14494, iteration 3100, dt = 0.000373838
+INFO|2023-04-10 20:46:43,825|pysph.solver.solver|Writing output at time 1.1824, iteration 3200, dt = 0.000372562
+INFO|2023-04-10 20:47:13,201|pysph.solver.solver|Writing output at time 1.21988, iteration 3300, dt = 0.00037876
+INFO|2023-04-10 20:47:42,494|pysph.solver.solver|Writing output at time 1.25755, iteration 3400, dt = 0.000378601
+INFO|2023-04-10 20:48:11,865|pysph.solver.solver|Writing output at time 1.29487, iteration 3500, dt = 0.00037412
+INFO|2023-04-10 20:48:41,271|pysph.solver.solver|Writing output at time 1.33261, iteration 3600, dt = 0.000378893
+INFO|2023-04-10 20:49:10,820|pysph.solver.solver|Writing output at time 1.37061, iteration 3700, dt = 0.000380714
+INFO|2023-04-10 20:49:40,326|pysph.solver.solver|Writing output at time 1.40857, iteration 3800, dt = 0.000382219
+INFO|2023-04-10 20:50:09,876|pysph.solver.solver|Writing output at time 1.44651, iteration 3900, dt = 0.000376768
+INFO|2023-04-10 20:50:39,530|pysph.solver.solver|Writing output at time 1.4846, iteration 4000, dt = 0.000382451
+INFO|2023-04-10 20:51:09,163|pysph.solver.solver|Writing output at time 1.52276, iteration 4100, dt = 0.000383218
+INFO|2023-04-10 20:51:38,951|pysph.solver.solver|Writing output at time 1.56103, iteration 4200, dt = 0.000383766
+INFO|2023-04-10 20:52:08,656|pysph.solver.solver|Writing output at time 1.5993, iteration 4300, dt = 0.000381999
+INFO|2023-04-10 20:52:38,387|pysph.solver.solver|Writing output at time 1.63764, iteration 4400, dt = 0.000382948
+INFO|2023-04-10 20:53:08,191|pysph.solver.solver|Writing output at time 1.67504, iteration 4500, dt = 0.000359664
+INFO|2023-04-10 20:53:38,124|pysph.solver.solver|Writing output at time 1.71048, iteration 4600, dt = 0.000349351
+INFO|2023-04-10 20:54:08,332|pysph.solver.solver|Writing output at time 1.74604, iteration 4700, dt = 0.000361281
+INFO|2023-04-10 20:54:38,428|pysph.solver.solver|Writing output at time 1.78248, iteration 4800, dt = 0.000371785
+INFO|2023-04-10 20:55:08,450|pysph.solver.solver|Writing output at time 1.81922, iteration 4900, dt = 0.000374613
+INFO|2023-04-10 20:55:38,421|pysph.solver.solver|Writing output at time 1.85712, iteration 5000, dt = 0.000380533
+INFO|2023-04-10 20:56:08,341|pysph.solver.solver|Writing output at time 1.8951, iteration 5100, dt = 0.000379155
+INFO|2023-04-10 20:56:38,288|pysph.solver.solver|Writing output at time 1.93283, iteration 5200, dt = 0.000380231
+INFO|2023-04-10 20:57:08,320|pysph.solver.solver|Writing output at time 1.97039, iteration 5300, dt = 0.000368185
+INFO|2023-04-10 20:57:38,423|pysph.solver.solver|Writing output at time 2.00661, iteration 5400, dt = 0.000362092
+INFO|2023-04-10 20:58:08,634|pysph.solver.solver|Writing output at time 2.04294, iteration 5500, dt = 0.000364819
+INFO|2023-04-10 20:58:39,156|pysph.solver.solver|Writing output at time 2.07922, iteration 5600, dt = 0.00034775
+INFO|2023-04-10 20:59:09,622|pysph.solver.solver|Writing output at time 2.10803, iteration 5700, dt = 4.81199e-05
+INFO|2023-04-10 20:59:39,975|pysph.solver.solver|Writing output at time 2.13904, iteration 5800, dt = 0.000366958
+INFO|2023-04-10 21:00:10,291|pysph.solver.solver|Writing output at time 2.17616, iteration 5900, dt = 0.000363854
+INFO|2023-04-10 21:00:40,901|pysph.solver.solver|Writing output at time 2.21315, iteration 6000, dt = 0.000372128
+INFO|2023-04-10 21:01:11,535|pysph.solver.solver|Writing output at time 2.25074, iteration 6100, dt = 0.000376963
+INFO|2023-04-10 21:01:41,889|pysph.solver.solver|Writing output at time 2.28832, iteration 6200, dt = 0.00037866
+INFO|2023-04-10 21:02:12,303|pysph.solver.solver|Writing output at time 2.32603, iteration 6300, dt = 0.000373489
+INFO|2023-04-10 21:02:42,747|pysph.solver.solver|Writing output at time 2.36345, iteration 6400, dt = 0.000367509
+INFO|2023-04-10 21:03:13,268|pysph.solver.solver|Writing output at time 2.40035, iteration 6500, dt = 0.000370989
+INFO|2023-04-10 21:03:43,835|pysph.solver.solver|Writing output at time 2.43762, iteration 6600, dt = 0.000377716
+INFO|2023-04-10 21:04:14,452|pysph.solver.solver|Writing output at time 2.4752, iteration 6700, dt = 0.000381403
+INFO|2023-04-10 21:04:34,365|pysph.solver.solver|Writing output at time 2.5, iteration 6765, dt = 0.000289959
+INFO|2023-04-10 21:04:34,367|pysph.solver.application|Run took: 2002.72571 secs
+INFO|2023-04-10 21:04:39,123|compyle.ext_module|Compiling code at: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:41,838|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:41,866|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:41,890|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:41,912|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:41,945|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:41,966|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:41,990|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,012|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,033|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,055|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,076|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,109|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,130|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,150|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,170|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,199|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,220|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,241|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,262|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,284|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,307|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,327|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,347|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,367|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,395|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,415|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,436|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,457|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,482|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,502|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,523|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,544|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,565|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,588|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,609|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,629|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,650|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,678|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,697|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,716|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,737|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,763|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,784|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,807|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,831|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,854|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,877|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,899|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,921|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,942|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,964|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:42,985|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,006|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,028|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,051|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,071|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,092|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,112|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,132|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,155|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,175|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,196|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,217|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,244|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,264|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,303|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,325|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,345|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,365|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,385|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
+INFO|2023-04-10 21:04:43,405|compyle.ext_module|Precompiled code from: /Users/chengjunyuan/.pysph/source/py3.1-macosx-11.0-arm64/m_f1baa31fbcfc337438589e11673d7c42.pyx
